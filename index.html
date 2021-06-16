@@ -8,17 +8,98 @@
     <link rel="stylesheet" href="./assets/styles/index.min.css">
 </head>
 <body>
-    <header class="header">
-        <a href="javascript:void(0)" class="header__menu-icon">
-            <span class="header__menu-line"></span>
-            <span class="header__menu-line"></span>
-            <span class="header__menu-line"></span>
-        </a>
+    <header class="header flex-between">
+        <div class="header__hamburger-menu transition btn-hover">
+            <a href="javascript:void(0)" class="header__menu-icon">
+                <span class="header__menu-line transition"></span>
+            </a>
+            <span class="header__hamburger-text">
+                menu
+            </span>
+        </div>
         <a href="#" class="header__logo">
             <img src="./assets/img/logo.svg" alt="logo cfd training">
         </a>
-    
+        <div class="header__btn-group btn-group">
+            <a href="#" class="btn transition">đăng nhập</a>
+            <a href="#" class="btn transition btn-primary">đăng kí</a>
+        </div>
     </header>
+    <nav class="nav transition">
+        <ul class="nav__items">
+            <li class="nav__item">
+                <a href="#" class="nav__link btn-hover transition">
+                    Trang Chủ
+            </a></li>
+            <li class="nav__item">
+                <a href="#" class="nav__link btn-hover transition">
+                    Khóa Học
+            </a></li>
+            <li class="nav__item">
+                <a href="#" class="nav__link btn-hover transition">
+                    CFD team
+            </a></li>
+            <li class="nav__item">
+                <a href="#" class="nav__link btn-hover transition">
+                   Liên Hệ
+            </a></li>
+        </ul>
+
+    </nav>
+    <main class="main transition">
+       <section class="banner">
+        <div class="banner__media">
+            <img src="https://source.unsplash.com/random" alt="">
+        </div>
+           <div class="banner__content">
+               <h2 class="banner__content-title">
+                Thực Chiến <span>Sáng Tạo Để Phát Triển</span>
+               </h2>
+               <span class="banner__content-desc">
+                <span class="bold">Giảm giá 5%</span> khi học theo nhóm!
+               </span>
+               <a href="javascript:void(0)" class="btn-primary btn-course">
+                   khóa học
+               </a>
+           </div>
+       </section>
+       <section class="courses container">
+           <h2 class="section-title">
+            Chào Mừng Bạn Đến Với CFD
+           </h2>
+           <span class="section-desc courses-desc">
+            Nơi có những khóa học thực chiến Front-End Dev và UX/UI Design, kết nối và chia sẻ kinh nghiệm giúp bạn có đầy đủ kỹ năng thực tế để tạo ra những sản phẩm sáng tạo, tinh tế và phù hợp.
+           </span>
+           <h2 class="section-title">
+            Khóa Học
+           </h2>
+           <div class="list-courses">
+               <div class="course">
+                   <span class="course-label">
+                       Sắp khai giảng
+                   </span>
+                       <h2 class="course-title">
+                           React JS & Redux
+                       </h2>
+                       <p class="course-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio omnis adipisci, facilis voluptates fuga rerum possimus delectus quo quisquam cum. Illo necessitatibus eaque maxime eos recu
+                       </p>
+                   <div class="course-bottom">
+                       <div class="course__author">
+                            <div class="course__author-avt">
+                                <img src="https://source.unsplash.com/random" alt="">
+                            </div>
+                            <span class="course__author-name">
+                                Đặng Vương
+                            </span>
+                       </div>
+                       <time>15/06/2021</time>
+                   </div>
+               </div>
+           </div>
+       </section>
+    </main>
+    <div class="overlay transition"></div>
     <script src="./assets/script/script.js"></script>
 </body>
 </html>
