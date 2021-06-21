@@ -104,6 +104,7 @@ body {
   align-items: center;
   height: var(--height-menu);
   z-index: 99;
+  border-bottom: 1px solid #ddd;
   &__logo {
     position: absolute;
     left: 50%;
@@ -536,8 +537,170 @@ body {
       }
     }
   }
+  .FAQ {
+    &-heading {
+      width: 100%;
+      align-self: flex-start;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 500;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    &-item {
+      margin-bottom: 8px;
+      .question {
+        background: #fff;
+        padding: 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &.active {
+          background: #ddd;
+        }
+        &:hover {
+          background: #ddd;
+        }
+        .narrow {
+          transform: rotate(0);
+        }
+        &.active > .narrow {
+          transform: rotate(90deg);
+        }
+        span {
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+      .content {
+        background: #fff;
+        display: flex;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.25s ease-in-out;
+        margin-top: 3px;
+        span {
+          padding: 15px;
+        }
+        &.active {
+          max-height: 600px;
+        }
+      }
+    }
+  }
+  .slider {
+    &-heading {
+      margin-bottom: 50px;
+    }
+    &-container {
+      display: grid;
+      grid-template-columns: var(--template-col);
+      grid-gap: 45px;
+    }
+    &-item {
+      height: 450px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .action {
+    background-color: $primary-color;
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-title {
+      color: #fff;
+      font-size: 2rem;
+      white-space: nowrap;
+      span {
+        display: block;
+      }
+    }
+    .btn-action {
+      background-color: #fff;
+      color: $primary-color;
+      border-radius: 30px;
+      padding: 10px 40px;
+      transition: all 0.25s ease-in-out;
+      border: 1px solid transparent;
+
+      &:hover {
+        opacity: 1;
+        background: $primary-color;
+        color: #fff !important;
+        border: 1px solid #fff;
+      }
+    }
+  }
 }
 
+footer {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    .slogan {
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 50px;
+      span {
+        display: block;
+      }
+    }
+    address,
+    .phone {
+      font-style: normal;
+      font-size: 15 px;
+    }
+  }
+  .footer-right {
+    .lists {
+      list-style: none;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 10px;
+      .list-item {
+        a {
+          margin: 0 10px;
+          font-weight: 400;
+          color: #333 !important  ;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid #ddd;
+    .container {
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 14px;
+        color: #7e7e7e;
+      }
+    }
+  }
+}
 @media screen and (min-width: 768px) {
   :root {
     --height-menu: 65px;
@@ -643,6 +806,29 @@ body {
           font-size: 0.8rem;
           font-weight: 300;
         }
+      }
+    }
+    .FAQ {
+      &-item,
+      &-heading {
+        max-width: 730px;
+        align-self: center;
+      }
+    }
+  }
+  footer {
+    .container {
+      flex-direction: row;
+      .lists {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .copyright {
+      .container {
+        padding: 20px 0;
+        justify-content: flex-start;
       }
     }
   }
